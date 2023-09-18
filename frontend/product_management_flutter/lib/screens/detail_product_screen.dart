@@ -80,9 +80,6 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
   }
 
   void setFlag() async {
-    // final SharedPreferences prefs = await SharedPreferences.getInstance();
-    // await prefs.setBool('isAdd', false);
-    //SharedPrefLocal.setIsAddValue(false);
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setBool('isAdd', false);
   }

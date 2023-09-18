@@ -24,8 +24,6 @@ class _FormProductState extends State<FormProduct> {
   int _stock = 0;
   bool flgPriceIsNan = false;
   bool flgStockIsNan = false;
-  //String btnText = '';
-  //bool? isAdd;
 
   @override
   void initState() {
@@ -34,21 +32,16 @@ class _FormProductState extends State<FormProduct> {
     _descriptionController.text = widget.productModel.description;
     _priceController.text = widget.productModel.price.toString();
     _stockController.text = widget.productModel.stock.toString();
-    //checkFlag();
   }
 
   @override
   Widget build(BuildContext context) {
-    //print('isAdd value at the start of build: $isAdd');
     return FutureBuilder(
         future: checkFlag(),
         builder: (context, snapshot) {
-          print('isAdd value inside future builder: ${snapshot.data}');
           if (snapshot.data == true) {
-            //setState(() {
             _priceController.text = '';
             _stockController.text = '';
-            //});
           }
           return Scaffold(
             body: SafeArea(
@@ -83,7 +76,6 @@ class _FormProductState extends State<FormProduct> {
                       minLines: 1,
                       maxLines: 2,
                       keyboardType: TextInputType.number,
-                      //inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                       decoration: const InputDecoration(
                         labelText: 'Price',
                         floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -204,10 +196,7 @@ class _FormProductState extends State<FormProduct> {
                               },
                             );
                           } else {
-                            print('isAdd value: ${snapshot.data}');
                             var response = (snapshot.data == true)
-                                //print('isAdd value: $isAdd');
-                                //var response = (isAdd!)
                                 ? await ProductApi.addNewProductApi(
                                     _title, _description, _price, _stock)
                                 : await ProductApi.updateProductApi(Product(
@@ -225,7 +214,6 @@ class _FormProductState extends State<FormProduct> {
                                 ..showSnackBar(
                                   SnackBar(
                                     content: (snapshot.data == true)
-                                        //content: (isAdd!)
                                         ? const Text(
                                             'New Product Added Successfully')
                                         : const Text(
@@ -238,9 +226,6 @@ class _FormProductState extends State<FormProduct> {
                                 ((route) => false),
                               );
                             } else {
-                              print('body: $_title, $_description, $_price,');
-                              print('response: ${response.statusCode}');
-                              print('statusCode: ${response.statusCode}');
                               ScaffoldMessenger.of(context)
                                 ..removeCurrentSnackBar()
                                 ..showSnackBar(
@@ -275,31 +260,5 @@ class _FormProductState extends State<FormProduct> {
   Future<bool?> checkFlag() async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     return prefs.getBool('isAdd');
-    // if (prefs.getBool('isAdd')!) {
-    //   _priceController.text = '';
-    //   _stockController.text = '';
-    // }
-
-    // bool value = await SharedPrefLocal.getIsAddValue();
-    // setState(() {
-    //   isAdd = value;
-    // });
-    // final SharedPreferences prefs = await SharedPreferences.getInstance();
-    // setState(() {
-    //   isAdd = prefs.getBool('isAdd');
-    // });
   }
-
-  // checkFlag() async {
-  //   // final SharedPreferences prefs = await SharedPreferences.getInstance();
-  //   // return prefs.getBool('isAdd');
-  //   // bool value = await SharedPrefLocal.getIsAddValue();
-  //   // setState(() {
-  //   //   isAdd = value;
-  //   // });
-  //   final SharedPreferences prefs = await SharedPreferences.getInstance();
-  //   setState(() {
-  //     isAdd = prefs.getBool('isAdd');
-  //   });
-  // }
 }

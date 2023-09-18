@@ -21,7 +21,7 @@ export class AppService {
         if (!product) {
             throw new NotFoundException('Product not found');
         }
-        console.log(product);
+        console.log(`inside findProduct: ${product}`);
         return product;
     }
 
