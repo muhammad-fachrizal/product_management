@@ -31,8 +31,6 @@ For Add New Product screen, there is a validation when user click "Add" button t
 there is also a validation when user click "Add" button to check if price or stock field is not a number, if so the app will show a pop-up dialog.
 <p float="left">
   <img src="https://github.com/muhammad-fachrizal/product_management/blob/main/screenshot/add_new_product_5.png" width="40%" height="40%"> 
-</p>
-<p float="left">
   <img src="https://github.com/muhammad-fachrizal/product_management/blob/main/screenshot/add_new_product_6.png" width="40%" height="40%"> 
 </p>
 
@@ -51,8 +49,6 @@ Same with Add New Product screen, for Update Product Screen, there is a validati
 there is also a validation when user click "Update" button to check if price or stock field is not a number, if so the app will show a pop-up dialog.
 <p float="left">
   <img src="https://github.com/muhammad-fachrizal/product_management/blob/main/screenshot/update_product_5.png" width="40%" height="40%"> 
-</p>
-<p float="left">
   <img src="https://github.com/muhammad-fachrizal/product_management/blob/main/screenshot/update_product_6.png" width="40%" height="40%"> 
 </p>
 
