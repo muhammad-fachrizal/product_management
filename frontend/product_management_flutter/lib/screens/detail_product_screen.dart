@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:product_management_flutter/common_widget/form_product.dart';
 import 'package:product_management_flutter/data/product_api.dart';
 import 'package:product_management_flutter/model/product.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class DetailProductScreen extends StatefulWidget {
   const DetailProductScreen({super.key, required this.productModel});
@@ -17,7 +16,6 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
   @override
   void initState() {
     super.initState();
-    setFlag();
   }
 
   @override
@@ -75,12 +73,12 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
               icon: const Icon(Icons.delete))
         ],
       ),
-      body: FormProduct(productModel: widget.productModel),
+      body: SafeArea(
+        child: FormProduct(
+          productModel: widget.productModel,
+          flgIsAdd: false,
+        ),
+      ),
     );
-  }
-
-  void setFlag() async {
-    final SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool('isAdd', false);
   }
 }

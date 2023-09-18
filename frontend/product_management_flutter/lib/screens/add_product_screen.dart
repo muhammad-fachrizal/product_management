@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:product_management_flutter/common_widget/form_product.dart';
 import 'package:product_management_flutter/model/product.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class AddProductScreen extends StatefulWidget {
   const AddProductScreen({super.key});
@@ -14,7 +13,6 @@ class _AddProductScreenState extends State<AddProductScreen> {
   @override
   void initState() {
     super.initState();
-    setFlag();
   }
 
   @override
@@ -24,14 +22,13 @@ class _AddProductScreenState extends State<AddProductScreen> {
         elevation: 2,
         title: const Text('Add New Product'),
       ),
-      body: FormProduct(
+      body: SafeArea(
+        child: FormProduct(
           productModel:
-              Product(id: '', title: '', description: '', price: 0, stock: 0)),
+              Product(id: '', title: '', description: '', price: 0, stock: 0),
+          flgIsAdd: true,
+        ),
+      ),
     );
-  }
-
-  setFlag() async {
-    final SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool('isAdd', true);
   }
 }
