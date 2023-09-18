@@ -1,0 +1,37 @@
+[
+    {
+        "id": "65080e046637998aef3abd0b",
+        "title": "Werner 6 ft. H Fiberglass Step Ladder Type I 250 lb. capacity",
+        "description": "HolsterTop with Lock-In System secures tools to increase productivity.\nSturdy paint can hanger on back side of top.\nBraces on top step, second step and top horizontal.\nExternal Pinch-Proof spreaders.\nSlip-resistant Traction-Tred steps.\nThe Lock-In System lets you customize your ladder top and safely secure your tools.\nEDGE molded brace and foot pad combination provides enhanced bracing strength and increased protection against damage.\nSlip-resistant foot pads attached to the EDGE structure.\nOptional manual pail shelf kit, model no. PK76-9 or automatic closing pail shelf kit model no. 76-2.",
+        "price": 999000.99,
+        "stock": 100
+    },
+    {
+        "id": "65080ec26637998aef3abd11",
+        "title": "Black Office Chair",
+        "description": "This ergonomic office chair keeps you comfy and focused with a high backrest that provides good support, made with airy mesh so you stay cool.",
+        "price": 989000,
+        "stock": 366
+    },
+    {
+        "id": "65080cf66637998aef3abd08",
+        "title": "Energizer Max Premium AA Alkaline Batteries 16 pk",
+        "description": "16 pack of Energizer MAX AA Alkaline Batteries, Double A Batteries *\nEnergizer's #1 longest-lasting MAX AA batteries - up to 50% longer lasting than EVEREADY GOLD in demanding devices *\nLong lasting batteries for your AA devices, like toys, games and remotes *\nEnergizer MAX AA batteries are designed to protect your devices against damaging leaks for up to two years after fully used *\nThese Energizer AA batteries hold power for up to 12 years in storage *\nFeel confident knowing you have the long-lasting power and protection you expect from Energizer *",
+        "price": 208000,
+        "stock": 20
+    },
+    {
+        "id": "65080c176637998aef3abd05",
+        "title": "White Table",
+        "description": "105x105cm.\nA clean and simple look that fits just about anywhere. You can combine it with other desks or drawer units to extend your work space. The clever design at the back hides messy cables.",
+        "price": 1799000,
+        "stock": 311
+    },
+    {
+        "id": "650801ac6637998aef3abcec",
+        "title": "Jar with lid",
+        "description": "Ideal for preserving pickles and jams, serving beverages or keeping your cookies crunchy. The airtight seal locks in all the goodness.",
+        "price": 29.9,
+        "stock": 11
+    }
+]
